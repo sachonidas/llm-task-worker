@@ -16,7 +16,7 @@ func TestRun_ProcessesAllTasks(t *testing.T) {
 		for _, id := range []string{"1", "2", "3"} {
 			tasks <- task.Task{ID: id, Prompt: "hi"}
 		}
-		close(tasks) // quien escribe, cierra
+		close(tasks)
 	}()
 
 	// Act
